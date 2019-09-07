@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Job
+
+def home_view(request):
+    asdf = Job.objects.all()
+    return render(request, 'jobs/home.html', {'asdfjobs':asdf})
